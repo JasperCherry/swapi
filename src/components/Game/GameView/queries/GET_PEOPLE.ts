@@ -5,6 +5,7 @@ export const GET_PEOPLE = gql`
   	allPeople {
   		people {
         name
+        height
       }
   	}
   }

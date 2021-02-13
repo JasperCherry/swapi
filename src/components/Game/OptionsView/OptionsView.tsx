@@ -55,7 +55,7 @@ const Game = (props: any) => {
         </OptionText>
       </SectionWrapper>
       <Button onClick={() => { setStartGame(true) }} >
-        Start
+        Start Game
       </Button>
     </ViewWrapper>
   );

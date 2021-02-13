@@ -13,7 +13,9 @@ const Game = () => {
       <Title>Game</Title>
       {startGame ? (
         <GameView
+          content={content}
           setStartGame={setStartGame}
+          playersNumber={playersNumber}
         />
       ) : (
         <OptionsView
