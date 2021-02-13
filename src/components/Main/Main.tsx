@@ -1,11 +1,12 @@
 import {
   StyledLink,
+  Title,
 } from '../../App.styled';
 
 const Main = () => {
   return (
     <div>
-      <h1>Main menu</h1>
+      <Title>Main menu</Title>
         <div>
           <StyledLink to="/game">
             Play Game

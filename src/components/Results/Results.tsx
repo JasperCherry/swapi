@@ -1,5 +1,6 @@
 import {
   StyledLink,
+  Title,
 } from '../../App.styled';
 
 const Results = () => {
@@ -7,7 +8,7 @@ const Results = () => {
 
   return (
     <div>
-      <h1>Results</h1>
+      <Title>Results</Title>
       <StyledLink to="/">
         Main menu
       </StyledLink>

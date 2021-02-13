@@ -16,6 +16,7 @@ import {
   CardTitle,
   CardValue,
   SectionWrapper,
+  SmallText,
 } from './GameView.styled';
 
 const GameView = (props: any) => {
@@ -48,7 +49,7 @@ const GameView = (props: any) => {
 
   const cards = players.map((player: any, index: number) =>
     <CardWrapper key={player.id}>
-      <h4>Player {player.id + 1}</h4>
+      <SmallText>Player {player.id + 1}</SmallText>
       <Card
         winner={player.winner}
         onClick={() => {
@@ -76,9 +77,9 @@ const GameView = (props: any) => {
     </CardWrapper>
   );
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <SmallText>Loading...</SmallText>;
 
-  if (error) return <div>Error!</div>;
+  if (error) return <SmallText>Error!</SmallText>;
 
   return (
     <div>

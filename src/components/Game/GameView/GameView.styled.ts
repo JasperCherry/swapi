@@ -40,3 +40,7 @@ export const CardValue = styled.p`
   color: black;
   font-size: 16px;
 `;
+
+export const SmallText = styled.p`
+  color: ${({ theme }) => theme.text};
+`;

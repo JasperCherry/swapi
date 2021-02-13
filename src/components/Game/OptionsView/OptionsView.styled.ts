@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const OptionTitle = styled.p`
-  color: black;
+  color: ${({ theme }) => theme.text};
   font-size: 20px;
 `;
 
@@ -10,7 +10,7 @@ interface OptionTextProps {
 };
 
 export const OptionText = styled.p<OptionTextProps>`
-  color: ${props => props.selected ? 'red' : 'black'};
+  color: ${props => props.selected ? 'red' : props.theme.text};
   cursor: pointer;
 `;
 
