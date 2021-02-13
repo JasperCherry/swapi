@@ -6,7 +6,7 @@ import {
 const Main = () => {
   return (
     <div>
-      <Title>Main</Title>
+      <Title>Main menu</Title>
         <div>
           <StyledLink to="/game">
             Play Game

@@ -36,9 +36,13 @@ const GameView = (props: any) => {
     if (gameFinished && !block) {
       updatePlayers(newPlayers);
       setBlock(true);
-
-      // save to localhost with date
-
+      const storedResults: any = JSON.parse(localStorage.getItem('storedResults') || '[]');
+      const newResult = {
+        players: newPlayers,
+        date: new Date().toString(),
+      };
+      storedResults.push(newResult);
+      localStorage.setItem('storedResults', JSON.stringify(storedResults));
     }
   });
 
@@ -68,7 +72,6 @@ const GameView = (props: any) => {
             <h3>Click to draw</h3>
           </>
         )}
-
       </Card>
     </CardWrapper>
   );

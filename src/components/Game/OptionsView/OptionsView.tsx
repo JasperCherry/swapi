@@ -4,6 +4,7 @@ import {
   OptionTitle,
   SectionWrapper,
   Button,
+  StyledLink,
 } from '../Game.styled';
 
 const Game = (props: any) => {
@@ -18,6 +19,9 @@ const Game = (props: any) => {
   return (
     <div>
       <SectionWrapper>
+        <StyledLink to="/">
+          Main menu
+        </StyledLink>
         <OptionTitle>Choose content:</OptionTitle>
         <OptionText
           selected={content === 'people' ? true : false}
