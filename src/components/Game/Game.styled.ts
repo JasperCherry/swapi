@@ -18,7 +18,7 @@ export const OptionText = styled.p<OptionTextProps>`
 `;
 
 export const SectionWrapper = styled.div`
-  padding: 20px;
+  padding: 10px;
 `;
 
 export const ViewWrapper = styled.div`
@@ -26,5 +26,29 @@ export const ViewWrapper = styled.div`
 
 export const Button = styled.button`
   color: black;
-  font-size: 30px;
+  font-size: 20px;
+`;
+
+export const CardWrapper = styled.div`
+  margin: 20px;
+`;
+
+export const Card = styled.div`
+  border-radius: 10px;
+  background-color: orange;
+  width: 150px;
+  height: 242px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+`;
+
+export const CardTitle = styled.p`
+  color: black;
+  font-size: 14px;
+`;
+
+export const CardValue = styled.p`
+  color: black;
+  font-size: 16px;
 `;

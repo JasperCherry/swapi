@@ -4,6 +4,7 @@ export const GET_PEOPLE = gql`
   query GetCountries {
   	allPeople {
   		people {
+        id
         name
         height
       }
