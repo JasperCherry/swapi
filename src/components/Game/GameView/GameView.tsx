@@ -16,7 +16,7 @@ import {
   CardTitle,
   CardValue,
   SectionWrapper,
-} from '../Game.styled';
+} from './GameView.styled';
 
 const GameView = (props: any) => {
   const { setStartGame, content, playersNumber } = props;

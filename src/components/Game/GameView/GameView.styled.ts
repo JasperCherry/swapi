@@ -1,23 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-export const Title = styled.h1`
-  color: black;
-`;
-
-export const OptionTitle = styled.p`
-  color: black;
-  font-size: 20px;
-`;
-
-export interface OptionTextProps {
-  selected: boolean;
-}
-
-export const OptionText = styled.p<OptionTextProps>`
-  color: ${props => props.selected ? 'red' : 'black'};
-  cursor: pointer;
-`;
 
 export const SectionWrapper = styled.div`
   padding: 10px;
@@ -58,13 +39,4 @@ export const CardTitle = styled.p`
 export const CardValue = styled.p`
   color: black;
   font-size: 16px;
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  font-size: 30px;
-  color: black;
-  &:hover {
-    color: orange;
-  }
 `;

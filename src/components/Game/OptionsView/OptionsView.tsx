@@ -4,8 +4,10 @@ import {
   OptionTitle,
   SectionWrapper,
   Button,
+} from './OptionsView.styled';
+import {
   StyledLink,
-} from '../Game.styled';
+} from '../../../App.styled'
 
 const Game = (props: any) => {
   const {

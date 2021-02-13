@@ -1,14 +1,13 @@
 import {
-  Title,
   StyledLink,
-} from './Results.styled';
+} from '../../App.styled';
 
 const Results = () => {
   const storedResults = JSON.parse(localStorage.getItem('storedResults') || '[]');;
 
   return (
     <div>
-      <Title>Results</Title>
+      <h1>Results</h1>
       <StyledLink to="/">
         Main menu
       </StyledLink>

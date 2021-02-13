@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { GameView } from './GameView';
 import { OptionsView } from './OptionsView';
-import { Title } from './Game.styled';
 
 const Game = () => {
   const [startGame, setStartGame] = useState(false);
@@ -10,7 +9,7 @@ const Game = () => {
 
   return (
     <div>
-      <Title>Game</Title>
+      <h1>Game</h1>
       {startGame ? (
         <GameView
           content={content}
