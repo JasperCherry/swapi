@@ -21,13 +21,13 @@ export const drawCard = (content: any, data: any, players: any) => {
     const people = data.allPeople.people;
     do {
       randomCard = people[Math.floor(Math.random() * people.length)];
-      duplicate = !!players.find((player: any) => player?.card?.name === randomCard.name);
+      duplicate = !!players.find((player: any) => player?.card?.id === randomCard.id);
     } while (duplicate);
   } else {
     const starships = data.allStarships.starships;
     do {
       randomCard = starships[Math.floor(Math.random() * starships.length)];
-      duplicate = !!players.find((player: any) => player?.card?.name === randomCard.name);
+      duplicate = !!players.find((player: any) => player?.card?.id === randomCard.id);
     } while (duplicate);
   }
 

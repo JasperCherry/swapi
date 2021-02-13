@@ -16,9 +16,9 @@ export const CardWrapper = styled.div`
   display: inline-block;
 `;
 
-export interface CardProps {
+interface CardProps {
   winner: boolean;
-}
+};
 
 export const Card = styled.div<CardProps>`
   border-radius: 10px;

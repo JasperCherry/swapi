@@ -5,9 +5,9 @@ export const OptionTitle = styled.p`
   font-size: 20px;
 `;
 
-export interface OptionTextProps {
+interface OptionTextProps {
   selected: boolean;
-}
+};
 
 export const OptionText = styled.p<OptionTextProps>`
   color: ${props => props.selected ? 'red' : 'black'};
