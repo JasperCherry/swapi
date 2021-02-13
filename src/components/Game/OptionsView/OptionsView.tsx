@@ -3,7 +3,6 @@ import {
   OptionText,
   OptionTitle,
   SectionWrapper,
-  ViewWrapper,
   Button,
 } from '../Game.styled';
 
@@ -17,7 +16,7 @@ const Game = (props: any) => {
   } = props;
 
   return (
-    <ViewWrapper>
+    <div>
       <SectionWrapper>
         <OptionTitle>Choose content:</OptionTitle>
         <OptionText
@@ -57,7 +56,7 @@ const Game = (props: any) => {
       <Button onClick={() => { setStartGame(true) }} >
         Start Game
       </Button>
-    </ViewWrapper>
+    </div>
   );
 }
 

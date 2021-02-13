@@ -21,21 +21,23 @@ export const SectionWrapper = styled.div`
   padding: 10px;
 `;
 
-export const ViewWrapper = styled.div`
-`;
-
 export const Button = styled.button`
   color: black;
   font-size: 20px;
+  margin: 5px;
 `;
 
 export const CardWrapper = styled.div`
   margin: 20px;
 `;
 
-export const Card = styled.div`
+export interface CardProps {
+  winner: boolean;
+}
+
+export const Card = styled.div<CardProps>`
   border-radius: 10px;
-  background-color: orange;
+  background-color: ${props => props.winner ? 'green' : 'orange'};
   width: 150px;
   height: 242px;
   text-align: center;
