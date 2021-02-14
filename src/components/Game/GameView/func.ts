@@ -1,5 +1,7 @@
+import { Player } from '../types';
+
 export const createPlayers = (number: number) => {
-  const players: any = [];
+  const players: Player[] = [];
 
   for (let i = 0; i < number; i += 1) {
     players.push({
@@ -13,7 +15,7 @@ export const createPlayers = (number: number) => {
   return players;
 };
 
-export const drawCard = (content: any, data: any, players: any) => {
+export const drawCard = (content: string, data: any, players: Player[]) => {
   let randomCard: any;
   let duplicate = false;
 
@@ -21,23 +23,23 @@ export const drawCard = (content: any, data: any, players: any) => {
     const people = data.allPeople.people;
     do {
       randomCard = people[Math.floor(Math.random() * people.length)];
-      duplicate = !!players.find((player: any) => player?.card?.id === randomCard.id);
+      duplicate = !!players.find((player: Player) => player?.card?.id === randomCard.id);
     } while (duplicate);
   } else {
     const starships = data.allStarships.starships;
     do {
       randomCard = starships[Math.floor(Math.random() * starships.length)];
-      duplicate = !!players.find((player: any) => player?.card?.id === randomCard.id);
+      duplicate = !!players.find((player: Player) => player?.card?.id === randomCard.id);
     } while (duplicate);
   }
 
   return randomCard;
 };
 
-export const checkGameResult = (content: any, players: any) => {
+export const checkGameResult = (content: string, players: Player[]) => {
   const newPlayers = JSON.parse(JSON.stringify(players));
   const valueName = content === 'people' ? 'height' : 'hyperdriveRating';
-  const gameFinished = !players.some((player: any) => player.card === null);
+  const gameFinished = !players.some((player: Player) => player.card === null);
 
   if (!gameFinished) return {
     newPlayers,

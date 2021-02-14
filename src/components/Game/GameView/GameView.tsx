@@ -18,6 +18,7 @@ import {
   SectionWrapper,
   SmallText,
 } from './GameView.styled';
+import { Player } from '../types';
 
 const GameView = (props: any) => {
   const { setStartGame, content, playersNumber } = props;
@@ -47,7 +48,7 @@ const GameView = (props: any) => {
     }
   });
 
-  const cards = players.map((player: any, index: number) =>
+  const cards = players.map((player: Player, index: number) =>
     <CardWrapper key={player.id}>
       <SmallText>Player {player.id + 1}</SmallText>
       <Card
