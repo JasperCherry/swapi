@@ -17,7 +17,7 @@ const Results = () => {
         Main menu
       </StyledLink>
       <ScrollWrapper>
-        <SmallText><pre>{JSON.stringify(storedResults.reverse(), null, 4) }</pre></SmallText>
+        <pre><SmallText>{JSON.stringify(storedResults.reverse(), null, 4) }</SmallText></pre>
       </ScrollWrapper>
     </div>
   );
